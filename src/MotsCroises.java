@@ -58,7 +58,7 @@ public class MotsCroises {
 	}
 	
 	
-	//Accesseurs à la grille de solution
+	//Accesseurs a la grille de solution
 	//preconditions (assert): coordCorrectes (lig, col) et !estCaseNoire(lig,col)
 	public char getSolution(int lig, int col) {
 		assert(coordCorrectes(lig,col));
@@ -72,7 +72,7 @@ public class MotsCroises {
 		solution.setCellule(lig, col, s);
 	}
 	
-	//Accesseurs à la grille du joueur
+	//Accesseurs a la grille du joueur
 	//preconditions (assert): coordCorrectes (lig, col) et !estCaseNoire(lig,col)
 	public char getProposition(int lig, int col) {
 		assert(coordCorrectes(lig,col));

@@ -22,7 +22,7 @@ public class Grille {
 	
 	//hauteur = nombre de lignes
 	//largeur = nombre de colonnes
-	// tab = tableau de chaines de caracteres à deux dimensions avec taille = hauteur x largeur
+	// tab = tableau de chaines de caracteres a deux dimensions avec taille = hauteur x largeur
 	
 	// Constructeur permettant d'obtenir une grille dotee d'un tableau de dimensions conformes aux valeurs
 	// respectives de hauteur et de largeur, dont tous les elements contiennent la valeur null
