@@ -30,7 +30,7 @@ public class MotsCroisesTest2021
 		vertical = new String[hauteur][largeur] ;
 
 		// Mise en place des cases noires
-		// Premi�re �tape : "mise � blanc" de toutes les cases
+		// Premiere etape : "mise  blanc" de toutes les cases
 		for (int lig=1; lig <=mc.getHauteur(); lig++ )
 		{
 			for (int col=1; col <=mc.getLargeur(); col++ )
@@ -40,8 +40,8 @@ public class MotsCroisesTest2021
 			}
 		}
 
-		// Deuxi�me �tape : noircir toutes les cases d'une diagonale (i,i)
-		// except�e pour (2,2)
+		// Deuxieme etape : noircir toutes les cases d'une diagonale (i,i)
+		// exceptee pour (2,2)
 		for (int i=1; i <=mc.getHauteur(); i++ )
 		{
 			if (i != 2)
@@ -51,7 +51,7 @@ public class MotsCroisesTest2021
 			}
 		}
 
-		// Mise en place des solutions, des propositions et des d�finitions
+		// Mise en place des solutions, des propositions et des definitions
 		char lettre = 'A' ;
 		for (int lig=1; lig<=mc.getHauteur(); lig++)
 		{
@@ -80,7 +80,7 @@ public class MotsCroisesTest2021
 			}
 		}
 
-		// Cr�ation d'une 2�me instance pour tester d'�ventuels effets de bord
+		// Creation d'une 2eme instance pour tester d'eventuels effets de bord
 		MotsCroises mc2 = new MotsCroises(2, 4);
 		for (int lig=1; lig <=mc2.getHauteur(); lig++ )
 		{
@@ -99,7 +99,7 @@ public class MotsCroisesTest2021
 
 	public void afficherReference(Object[][] tab, String libelle)
 	{
-		System.out.println("R�f�rence " + libelle + " :") ;
+		System.out.println("Reference " + libelle + " :") ;
 		for (int lig=1; lig<=hauteur; lig++)
 		{
 			for (int col=1; col<=largeur; col++)
@@ -119,12 +119,12 @@ public class MotsCroisesTest2021
 			{
 				if (noire[lig-1][col-1])
 				{
-					assertTrue("La case (" + lig + "," + col + ") doit �tre noire",
+					assertTrue("La case (" + lig + "," + col + ") doit etre noire",
 									mc.estCaseNoire(lig, col)) ;
 				}
 				else
 				{
-					assertFalse("La case (" + lig + "," + col + ") ne doit pas �tre noire",
+					assertFalse("La case (" + lig + "," + col + ") ne doit pas etre noire",
 									mc.estCaseNoire(lig, col)) ;
 				}
 			}
@@ -145,13 +145,13 @@ public class MotsCroisesTest2021
 	@Test
 	public void testHorizontal()
 	{
-		testGrille(horizontal, "d�finition horizontale") ;
+		testGrille(horizontal, "definition horizontale") ;
 	}
 
 	@Test
 	public void testVertical()
 	{
-		testGrille(vertical, "d�finition verticale") ;
+		testGrille(vertical, "definition verticale") ;
 	}
 
 	@Test
@@ -159,7 +159,7 @@ public class MotsCroisesTest2021
 	{
 		if (testMethode(1).equals("ArrayIndexOutOfBoundsException"))
 		{
-			fail("Erreur d'indice : v�rifiez que VM Arguments contient bien -enableassertions") ;
+			fail("Erreur d'indice : verifiez que VM Arguments contient bien -enableassertions") ;
 		}
 
 		// StringBuffer probleme = new StringBuffer() ;
@@ -171,7 +171,7 @@ public class MotsCroisesTest2021
 		}
 		if (probleme.length() > 0)
 		{
-			fail("Ces appels de fonction devraient d�clencher une AssertionError : "
+			fail("Ces appels de fonction devraient declencher une AssertionError : "
 					+ probleme.toString()) ;
 		}
 	}
@@ -249,8 +249,8 @@ public class MotsCroisesTest2021
 					{
 						case "solution" : observe = mc.getSolution(lig, col); break ;
 						case "proposition" : observe = mc.getProposition(lig, col); break ;
-						case "d�finition horizontale" : observe = mc.getDefinition(lig, col, true); break ;
-						case "d�finition verticale" : observe = mc.getDefinition(lig, col, false); break ;
+						case "definition horizontale" : observe = mc.getDefinition(lig, col, true); break ;
+						case "definition verticale" : observe = mc.getDefinition(lig, col, false); break ;
 					}
 					assertEquals("La case (" + lig + "," + col + ") de " + libelle
 									+ " doit contenir \"" + attendu + "\".",

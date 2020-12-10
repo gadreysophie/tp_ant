@@ -23,7 +23,7 @@ public class Cercle
 		}
 		else
 		{
-			throw new IllegalArgumentException("Le rayon ne peut être négatif : " + rayon) ;
+			throw new IllegalArgumentException("Le rayon ne peut etre negatif : " + rayon) ;
 		}
 	}
 	

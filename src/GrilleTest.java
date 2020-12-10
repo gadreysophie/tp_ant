@@ -24,9 +24,9 @@ public class GrilleTest
 	@Test
 	public void testHauteurLargeur()
 	{
-		assertEquals ("La hauteur est égale au 1er paramètre du constructeur",
+		assertEquals ("La hauteur est egale au 1er parametre du constructeur",
 				hauteur, g1.getHauteur()) ;
-		assertEquals ("La largeur est égale au 2e paramètre du constructeur",
+		assertEquals ("La largeur est egale au 2e parametre du constructeur",
 				largeur, g1.getLargeur()) ;
 	}
 
@@ -42,14 +42,14 @@ public class GrilleTest
 					String ch2 = ch1 + ',' + Integer.toString(c) ;
 					g1.setCellule(l, c, ch2) ;
 					g2.setCellule(l, c, ch2 + "x");
-					assertEquals("La valeur restituée doit être la valeur enregistrée",
+					assertEquals("La valeur restituee doit etre la valeur enregistree",
 										ch2, g1.getCellule(l, c)) ;
 				}
 			}
 		}
 		catch (ArrayIndexOutOfBoundsException e)
 		{
-			fail("L'indice de tableau ne doit pas dépasser hauteur-1 (resp. largeur-1");
+			fail("L'indice de tableau ne doit pas depasser hauteur-1 (resp. largeur-1");
 		}
 	}
 
@@ -57,25 +57,25 @@ public class GrilleTest
 	public void testPreconditions()
 	{
 		boolean testOK = false ;
-		// Précondition de hauteur
+		// Precondition de hauteur
 		try
 		{
 			new Grille(-4, 5) ;
 			testOK = false ;
 		}
 		catch (AssertionError e){ testOK = true ; }
-		assertTrue("Une hauteur négative doit déclencher une AssertionError", testOK) ;
+		assertTrue("Une hauteur negative doit declencher une AssertionError", testOK) ;
 
-		// Précondition de largeur
+		// Precondition de largeur
 		try
 		{
 			new Grille(4, -5) ;
 			testOK = false ;
 		}
 		catch (AssertionError e){ testOK = true ; }
-		assertTrue("Une largeur négative doit déclencher une AssertionError", testOK) ;
+		assertTrue("Une largeur negative doit declencher une AssertionError", testOK) ;
 
-		// Précondition de 1ère coordonnée de cellule
+		// Precondition de 1ere coordonnee de cellule
 		try
 		{
 			g1.setCellule(hauteur+1, 1, "hgjhgjhg");
@@ -84,7 +84,7 @@ public class GrilleTest
 		catch (AssertionError e){ testOK = true ; }
 		assertTrue("Tout non-respect des bornes doit causer une AssertionError", testOK) ;
 
-		// Précondition de 2ème coordonnée de cellule
+		// Precondition de 2eme coordonnee de cellule
 		try
 		{
 			g1.setCellule(1, -1, "hgjhgjhg");
