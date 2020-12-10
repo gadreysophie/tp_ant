@@ -22,11 +22,11 @@ public class Grille {
 	
 	//hauteur = nombre de lignes
 	//largeur = nombre de colonnes
-	// tab = tableau de chaînes de caractères à deux dimensions avec taille = hauteur x largeur
+	// tab = tableau de chaines de caracteres à deux dimensions avec taille = hauteur x largeur
 	
-	// Constructeur permettant d'obtenir une grille dotée d'un tableau de dimensions conformes aux valeurs
-	// respectives de hauteur et de largeur, dont tous les éléments contiennent la valeur null
-	// préconditions (assert) hauteur >=0 et largeur >=0
+	// Constructeur permettant d'obtenir une grille dotee d'un tableau de dimensions conformes aux valeurs
+	// respectives de hauteur et de largeur, dont tous les elements contiennent la valeur null
+	// preconditions (assert) hauteur >=0 et largeur >=0
 	
 	public Grille (int h, int l) {
 		assert (h>=0 & l >=0);
@@ -43,27 +43,27 @@ public class Grille {
 		return largeur;
 	}
 	
-	//Validité des coordonnées
+	//Validite des coordonnees
 	//Resultat : vrai ssi ligne (respectivement colonne) est compris entre 1 et getHauteur()(respectivement getLargeur())
 	public boolean coordCorrectes (int lig, int col) {
 		return (lig>0) & (lig<=hauteur) & (col>0) & (col<=largeur);
 	}
 	
-	//Valeur de la cellule ayant pour coordonnées (lig, col)
+	//Valeur de la cellule ayant pour coordonnees (lig, col)
 	//precondition (assert) : coordCorrectes (lig, col)
 	public String getCellule(int lig, int col) {
 		assert(coordCorrectes(lig,col));
 		return table[lig-1][col-1];
 	}
 	
-	//Modification de la cellule de coordonnées (lig,col)
+	//Modification de la cellule de coordonnees (lig,col)
 	//precondition (assert) : coordCorrectes (lig, col)
 	public void setCellule(int lig, int col, String ch) {
 		assert(coordCorrectes(lig,col));
 		table[lig-1][col-1]=ch;
 	}
 	
-	//Texte sur "hauteur" lignes, colonnes séparées par des |
+	//Texte sur "hauteur" lignes, colonnes separees par des |
 	public String toString () {
 		String result="";
 		for (int i=0; i<hauteur; i++) {

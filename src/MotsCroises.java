@@ -10,7 +10,7 @@ public class MotsCroises {
 	private int hauteur;
 	private int largeur;
 	
-	//Constructeur créant une instance de MotsCroises dotée de 4 instances de Grille suivant les spécifs données ci dessous
+	//Constructeur creant une instance de MotsCroises dotee de 4 instances de Grille suivant les specifs donnees ci dessous
 	public MotsCroises (int h, int l) {
 		assert (h>=0 & l >=0);
 		solution=new Grille (h,l);
@@ -21,7 +21,7 @@ public class MotsCroises {
 		this.largeur=l;
 	}
 	
-	//Nombre de rangées (ligne)
+	//Nombre de rangees (ligne)
 	public int getHauteur() {
 		return hauteur;
 	}
@@ -31,7 +31,7 @@ public class MotsCroises {
 		return largeur;
 	}
 	
-	//Validité des coordonnées
+	//Validite des coordonnees
 	//Resultat : vrai ssi (lig,col) designent une cellule existance de la grille
 	public boolean coordCorrectes(int lig, int col) {
 		return (lig>0) & (lig<=hauteur) & (col>0) & (col<=largeur);
@@ -116,7 +116,7 @@ public class MotsCroises {
 				//j=j+1;
 			}
 		//}
-		else /*pas de définition*/ {
+		else /*pas de definition*/ {
 			horizontal.setCellule(lig, col, "");
 			vertical.setCellule(lig, col, "");
 		}
